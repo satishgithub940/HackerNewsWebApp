@@ -26,7 +26,7 @@ export class HackernewslistComponent  implements OnInit  {
   ngOnInit() {
     this.loadData();
   }
- 
+  
   loadData() {
     this.dataService.getNewStories().subscribe(
       (data) => {
