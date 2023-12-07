@@ -10,6 +10,7 @@ export interface UserData {
   title: string;
   score: string;
   type: string;
+  url: string;
 }
 
 @Component({
@@ -22,7 +23,7 @@ export interface UserData {
 export class HackerNewsItemListComponent {
 
 
-  displayedColumns: string[] =['title', 'score', 'type'];
+  displayedColumns: string[] =['title', 'score', 'type','url'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
