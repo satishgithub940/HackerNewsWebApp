@@ -10,9 +10,6 @@ import { Observable } from 'rxjs';
   constructor(private http: HttpClient) { }
 data1:any;
   getNewStories(): Observable<any> {
-    // return this.http.get<number[]>(`${this.apiUrl}/topstories.json`);
-   // this.data1 = this.http.get<any>(this.apiUrl);
-    //console.log(this.data1);
     return this.http.get<any>(this.apiUrl);
   }
 }

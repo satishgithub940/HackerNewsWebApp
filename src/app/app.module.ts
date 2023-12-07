@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HackernewslistComponent } from './hackernewslist/hackernewslist.component';
 import { HackerNewsService } from './hacker-news.service';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HackerNewsItemListComponent } from './hacker-news-item-list/hacker-news-item-list.component';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
-    AppComponent,
-    HackernewslistComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HackerNewsItemListComponent,
+    MatIconModule
   ],
   providers: [HackerNewsService],
   bootstrap: [AppComponent]
