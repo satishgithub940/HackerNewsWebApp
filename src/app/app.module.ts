@@ -10,9 +10,12 @@ import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HackerNewsItemListComponent } from './hacker-news-item-list/hacker-news-item-list.component';
 import { MatIconModule } from '@angular/material/icon';
+import { LoaderComponent } from './loader/loader.component';
+import { LoaderService } from './loader.service';
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -23,9 +26,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatSortModule,
     BrowserAnimationsModule,
     HackerNewsItemListComponent,
-    MatIconModule
+    MatIconModule,
+    LoaderComponent
+    
   ],
-  providers: [HackerNewsService],
+  providers: [HackerNewsService,LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
